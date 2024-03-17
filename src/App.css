@@ -71,25 +71,58 @@ margin-left: 20px;
   margin-top: 20px;
   text-align: center;
 }
+
 .btn{
-  background-image: linear-gradient(to right, #16222A 0%, #3A6073  51%, #16222A  100%);
-  margin: 5px;
-  padding: 15px;
-  width: 10rem;
-  text-align: center;
-  text-transform: uppercase;
-  transition: 0.5s;
-  background-size: 200% auto;
-  color: white;            
-  box-shadow: 0 0 20px #eee;
-  border-radius: 10px;
-  cursor: pointer;  
+  border: 1px solid #222222;
+  background: none;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-family: "montserrat";
+  cursor: pointer;
+  height : 45px;
+  margin: 10px;
+  transition: 0.8s;
+  position: relative;
+  overflow: hidden;
 }
-.btn:hover {
-  background-position: right center; /* change the direction of the change here */
+.btn1{
+  color: #222222;
+}
+
+.btn1:hover{
   color: #fff;
-  text-decoration: none;
 }
+
+.btn::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: #222222;
+  z-index: -1;
+  transition: 0.8s;
+}
+.btn1::before{
+  top: 0;
+  border-radius: 0 0 50% 50%;
+}
+
+.btn1:hover::before{
+  height: 180%;
+}
+.search-btn{
+  text-align: center;
+  flex: 1;
+  margin: 4px 0 0 10%;
+}
+.search-btn input{
+  padding: 13px 35px;
+  width: 20rem;
+  outline: none;
+
+}
+
 .character-showing{
   text-align: center;
   margin: 10px;
@@ -106,12 +139,31 @@ margin-left: 20px;
 }
 
 .prev-next-btn{
-  margin: 0 auto;
-  text-align: center;
   display: flex;
-  justify-content: center;
+  justify-content: end;
 }
 
+/* Suggestion css */
+.suggestions {
+  width: 397px;
+  margin-left: 21%;
+  margin-top: 0;
+  position: absolute;
+  min-height: 150px;
+  max-height: 300px;
+  overflow-x: hidden;
+  list-style: none;
+}
+
+.suggestions-list-item {
+  padding: 15px 10px;
+  background-color: #f3f3f3;
+}
+
+.suggestions-list-item:hover{
+  background-color: #222222;
+  color: #fff;
+}
 
 @media screen and (max-width: 600px) {
   .back-to-home-btn{
@@ -120,6 +172,17 @@ margin-left: 20px;
   .character-details{
     display: table-cell;
     width: 100%;
+  }
+  .prev-next-btn{
+    display: block;
+    text-align: center;
+  }
+  .search-btn input{
+    width: 12rem;
+  }
+  .suggestions{
+    width: 264px;
+    margin-left: -12%;
   }
 
 }

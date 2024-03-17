@@ -61,7 +61,7 @@ const CharacterDetails = () => {
         </div>
     </div>
     <div className='back-to-home-btn'>
-    <Link to='/'><button className='btn'>Back</button></Link>
+    <Link to='/'><button className='btn btn1'>Back</button></Link>
     </div>
     </>
   )
