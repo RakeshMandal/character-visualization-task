@@ -13,7 +13,8 @@ const Characters = () => {
 
 	useEffect(() => {
 		getCharacterfromAPI();
-	}, [page]);
+        // eslint-disable-next-line
+	},[page]);
 
 	async function getCharacterfromAPI() {
 		try {
@@ -60,10 +61,13 @@ const Characters = () => {
 	};
 
 	const suggestedText = (value) => {
-	    characters.filter(item => {
+        // eslint-disable-next-line
+	    characters.filter(item => { 
 			if (value === item.name) {
 				setCharecters(item);
 			}
+            
+            
 		});
 		setSearchtext(value);
 		setSuggest([]);
