@@ -13,7 +13,7 @@ const Characters = () => {
 
 	useEffect(() => {
 		getCharacterfromAPI();
-        // eslint-disable-next-line
+        // eslint-disable-next-line react-hooks/exhaustive-deps
 	},[page]);
 
 	async function getCharacterfromAPI() {
@@ -102,8 +102,8 @@ const Characters = () => {
 					 placeholder='Search your favorite Character' />
 					{getSuggestions()}
 				</div>
-				<button onClick={prevPage} className='btn btn1'>Prev.</button>
-				<button onClick={nextPage} className='btn btn1'>Next.</button>
+				<button onClick={prevPage} className='btn btn1 btn12'>Prev.</button>
+				<button onClick={nextPage} className='btn btn1 btn2'>Next.</button>
 			</div>
 
 			<div className='showed-characters'>

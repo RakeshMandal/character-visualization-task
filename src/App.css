@@ -176,15 +176,45 @@ margin-left: 20px;
   .prev-next-btn{
     display: block;
     text-align: center;
+    margin-bottom: 43%;
   }
   .search-btn input{
     width: 12rem;
   }
   .suggestions{
     width: 264px;
-    margin-left: -12%;
+    margin-left: -14%;
   }
+  .search-btn{
+    position: absolute;
+    top: 30%;
+  }
+  .btn12{
+    position: absolute;
+    top: 20%;
+    left: 21%;
+}
+.btn2{
+  position: absolute;
+  top: 20%;
+}
 
+}
+
+@media screen and (min-width: 768px) {
+  .suggestions{
+    margin-left: 0;
+  }
+}
+@media (min-width:1025px){
+  .suggestions{
+    margin-left: 12%;
+  }
+}
+@media (min-width:1025px){
+  .suggestions{
+    margin-left: 21%;
+  }
 }
 
 
