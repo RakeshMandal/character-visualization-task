@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useContext } from 'react'
-import {API_URL} from '../constant/apiConstant'
 import CharacterContext from '../context/CharacterContext';
 import { Link } from 'react-router-dom';
 
@@ -53,7 +52,7 @@ const Characters = () => {
             <div key={id} className='character-showing'>
             <Link to={`/character/${item.id}`} onClick={() => handleCharacterClick(item.id)}>
 
-                <img src={item.image} />
+                <img src={item.image} alt={item.name}/>
                 <h3>{item.name}</h3>
              </Link>
             </div>
